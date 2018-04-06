@@ -1,0 +1,43 @@
+footer{
+	background-color: $cor-menu;
+	padding: 0.1em;
+	padding-bottom: 1em;
+
+	ul{
+		list-style-type: none;
+		display: flex;
+		flex-wrap: nowrap;
+		margin: 1em;
+		justify-content: flex-end;
+
+		li{
+			
+		    width: 2.7em;
+		    height: 2.5em;
+		    margin-right: 0.5em;
+		    a{		    	
+			    background-repeat: no-repeat;
+	    	    padding-right: 3em;
+			    padding-bottom: 2em;	
+			    border-radius: 50%;		
+			    background-position-x: center;
+    			background-position-y: center; 
+    			background-size: cover;   
+
+    			@include tabletLand{
+    				filter: grayscale(100%);
+
+    				&:hover{
+    					filter: grayscale(0);
+    					transition: filter 1s;
+    				}
+    			}
+		    }
+		    a[name="facebook"]{background-image: url(../img/facebook.png);}
+		    a[name="twitter"]{background-image: url(../img/twitter.png);}
+		    a[name="youtube"]{background-image: url(../img/youtube.png);}
+		    a[name="linkedin"]{background-image: url(../img/linkedin.png);}
+		    a[name="github"]{background-image: url(../img/github.png);}
+		}
+	}
+}

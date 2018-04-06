@@ -1,0 +1,60 @@
+.slidesHome{
+	display: none;
+	overflow: hidden;
+	height: 36em;
+
+	@include iphone6{
+		height: 42em;
+	}
+	@include tabletLand{
+		height: 38em;
+	}	
+	
+	img{
+		height: 100%;
+		width: auto;
+		left: -40%;
+		position: relative;
+
+		@include tabletLand{ 
+			left: 0;
+			width: 100%;
+		 }
+	}
+	
+	.mensagem{
+		background-color: rgba(42, 85, 136, 0.73);
+	    position: relative;
+	    top: -13em;
+	    width: 9em;
+	    border-radius: 10%;
+	    padding: 0.5em;
+	    left: 3%;
+	    text-align: center;
+	    color: #fff;
+	    font-size: 1.2em;
+
+	    @include tabletLand{
+	    	font-size: 2em;
+	    	top: -11em;
+	    	left: 65%;
+	    }
+
+	}
+}
+.last{
+	display: block;
+}
+.fade{
+	animation: fade 1s;
+}
+
+@keyframes fade{
+	from{
+		opacity: 0.6;
+	}
+	to{
+		opacity: 1;
+	}
+}
+

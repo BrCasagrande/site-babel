@@ -1,0 +1,38 @@
+#sobre{
+	position: relative;
+
+	@include tabletLand{
+		padding-bottom: 3em;
+	}
+	@include desktop{
+			div{padding: 0 8em;}
+		}
+	a{
+		top: -4em;
+		position: absolute;
+
+		@include tabletLand{
+			top: -5em;
+		}
+	}
+	h1{		
+		text-align: center;
+
+		@include tabletLand{
+			padding: 0.5em;
+		}
+	}
+	#texto{
+		text-align: justify;
+		padding: 1.5em;	
+	}
+	img{
+		width: 100%;
+
+		@include tabletLand{
+			    width: 50%;
+			    float: left;
+			    margin: 1em;
+		}
+	}
+}

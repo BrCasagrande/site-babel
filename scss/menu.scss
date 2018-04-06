@@ -1,0 +1,93 @@
+.nave{
+	position: fixed;
+	width: 100%;
+	background-color: $cor-menu;
+	z-index: 999;
+	font-size: 1.5em;
+	top: 0;	
+
+	@include tabletLand{
+		font-size: 1.75em;
+	}
+	@include desktop{
+		font-size: 1.5em;
+		display: flex;
+	}
+	@include desktop{
+		#btn-menu{
+			display: none;				
+		}
+	}
+	span{		
+	    position: relative;
+	    top: 0.5em;
+	    left: 0.5em;
+	}
+
+	a{
+		text-decoration: none;
+		color: #fff;
+	}
+	.menu-abrir{	
+		display: inline;
+		width: auto;
+		vertical-align: middle;
+		padding: 0.5em;
+		background: none;
+		border: 0;
+		color: #fff;
+		float: right;
+		padding-right: 1em;
+		&:hover{
+			background-color: rgba(0,0,0,0.5);
+		}				    
+		
+	}
+	#menu{
+		background-color: $cor-menu;
+		vertical-align: middle;
+		font-weight: bold;
+		list-style-type: none;					
+		height: 0;
+		width: 100%;
+		top: -50%;
+		left: 0;
+		overflow-y: scroll;
+		transition: 0.3s;
+		opacity: 0;	
+		margin: 0;
+		padding: 0;	
+
+		@include desktop{
+			height: auto;
+			opacity: 1;
+		}
+		
+		li{
+
+			border-bottom: 1px solid #595962;
+			text-align: center;
+			margin-right: 2em;
+			margin-left: 2em;
+
+			@include tabletLand{
+				margin: 0;
+				padding-right: 0.5em;
+				padding-left: 0.5em;
+				float: left;
+			}
+			
+			&:hover{
+				background-color: #595962;
+			}					
+
+			a{
+				display: block;
+				line-height: 1;
+				text-decoration: none;
+				color: #F9F9F9;
+				padding: 1em;				
+			}
+		}			
+	}
+}

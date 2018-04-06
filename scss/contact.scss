@@ -1,0 +1,75 @@
+#contato{
+	position: relative;
+
+	@include tabletLand{
+		height: 25em;
+	}
+	@include tabletLand{
+		height: 40em;
+	}
+
+	a{
+		position: absolute;
+		top: -4em;
+	}
+	h1{
+		padding-top: 0.5em;
+	    text-align: center;
+	    margin: 0.5em;	   
+	}
+	
+	form{
+		padding: 2em;
+		padding-top: 0;
+
+
+		@include tabletLand{
+			padding: 0 15em;
+
+			.contato-dado{
+				width: 100%;			
+			}
+			.contato-regiao{
+				width: 30%;	
+			}
+			#textoarea{
+				width: 100%;	
+			}
+			div{
+				float: left;
+				padding: 0.5em;
+			}
+		}
+
+
+		input, textarea, select{
+			width: 100%;
+		    padding-top: 0.3em;
+		    padding-bottom: 0.3em;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    margin-top: 0.5em;
+		    margin-bottom: 0.5em;
+		}
+		
+		option{
+			font-weight: bold;
+			height: 2em;
+		}
+		
+
+		input[type=submit]{
+			background-color: #449dda;
+			padding: 0.5em;
+			font-size: 2em;
+			color: #FFF;
+
+			@include tabletLand{
+				width: 100%;
+			    float: left;
+			    margin: 0.2em;
+			    margin-top: 1em;
+			}
+		}		
+	}
+}

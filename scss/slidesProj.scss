@@ -1,0 +1,168 @@
+
+#projetos{
+	background-color: $cor-fundo2;
+	height: 33em;
+	width: 100%;
+
+	@include iphone6{
+		height: 40em;
+	}
+
+	@include tabletLand{
+		height: 34em;
+	}
+	h1{
+		text-align: center;
+		padding: 1em;
+		color: #fff;
+	}
+	a{
+		position: absolute;
+		top: 82.3em;	
+				
+		@include iphone6{		
+			top: 86em;		
+		}
+		@include tabletLand{
+			top: 66em;
+		}
+	}	
+	
+}
+	
+.slidesProj{
+	display: none;	
+	height: auto;	
+
+	@include iphone6{
+		height: 23em;		
+	}
+	@include tabletLand{
+    	height: 22em;
+	}
+	@include desktop{
+    	padding: 0 0.75em;
+	}
+	
+	.caption-container {
+	  text-align: center;
+	  background-color: $cor-fundo2;
+	  color: white;
+	  height: 8em;
+	  position: relative;
+	  top: -0.3em;
+
+	  @include tabletLand{
+	  	float: right;
+	  	right: 6em;
+	  }
+	  h2{
+	  	color: #ffb300;
+	  	margin: 0.5em;	  	
+	  }
+	  h4{
+	  	margin: 0.5em;
+	  	b{
+	  		color: $cor-slidetext;
+	  	}
+	  }
+	  p{
+	  	width: 20%;
+	  	float: left;
+	  	margin: 0.5em;
+
+	  	@include tabletLand{
+	  		width: 100%;
+		  }
+	  	b{
+	  		color: $cor-slidetext;
+	  	}
+	  }	  
+	}
+
+	.building{
+		width: 100%;
+		height: 100%;		
+
+		@include tabletLand{	
+			width: 50%;		
+		}				
+	}			
+}
+
+.prev, .next{
+	cursor: pointer;
+	position: absolute;
+	width: auto;
+	padding: 16px;
+	top: 49em;
+	color: white;
+	font-weight: bold;
+	font-size: 2em;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+
+	&:hover {
+	  background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	@include iphone6{
+		top: 53em;
+	}
+
+	@include tabletLand{
+		display: none;
+	}
+}
+
+.next{
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+#row{		
+display: none;	
+
+	@include tabletLand{
+		display: block;	
+		padding-top: 0.75em;
+	}
+	@include tabletLand{
+		padding-left: 0.75em;
+	}
+
+	&:after {
+		content: "";
+		clear: both;
+	}
+	.column {
+		float: left;
+		width: 5em;
+
+		@include tabletLand{
+			width: 7em;
+		}
+		@include desktop{
+			width: 8em;
+		}
+		.mini{
+			cursor: pointer;
+			opacity: 0.6;
+			height: 3em;
+			width: 100%;
+			&:hover {
+			  opacity: 1;
+			}
+			img{width: 100%;}
+		}	
+		.active {
+		  opacity: 1;
+		  transition: opacity 1s;
+		}					
+	}			
+}
+
+
+
+
+
