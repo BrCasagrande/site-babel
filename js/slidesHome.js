@@ -15,7 +15,7 @@ function carousel(){
       //slideRandom(i-1);  
 }
 
-function slideRandom(n) {
+/*function slideRandom(n) {
   let elem = document.getElementsByClassName("mensagem");   
   let x = Math.round(Math.random()*(-screen.height));
   let x2 = Math.round(Math.random()*(-screen.height));
@@ -48,4 +48,4 @@ function slideRandom(n) {
     console.log("x = "+x);
       console.log("y = "+y);
   }      
-}
+}*/

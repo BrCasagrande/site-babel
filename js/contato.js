@@ -30,7 +30,8 @@ function limparContato(){
 const selecionaEstado = () =>{
 	let estadoLista = estados.estados;
 	for(i=0; i<estadoLista.length; i++){
-		estado.innerHTML += `<option value="${estadoLista[i].sigla}">${estadoLista[i].sigla}</option>`;
+		estado.innerHTML += 
+		`<option value="${estadoLista[i].sigla}">${estadoLista[i].sigla}</option>`;
 	}
 	
 }
