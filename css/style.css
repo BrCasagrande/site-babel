@@ -299,26 +299,31 @@ template {
 
 html {
   font-family: sans-serif;
-  font-size: 1rem;
   scroll-behavior: smooth;
   background-color: #f7f7f7; }
   html .container {
     position: relative; }
 
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 1.17rem; } }
+@media screen and (min-width: 730px) {
+  html {
+    font-size: 1.5rem; } }
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 1rem; } }
 .nave {
   position: fixed;
   width: 100%;
   background-color: #343a40;
   z-index: 999;
-  font-size: 1.5em;
-  top: 0; }
-  @media screen and (min-width: 1020px) and (orientation: landscape) {
-    .nave {
-      font-size: 1.75em; } }
+  top: 0;
+  font-size: 1.5em; }
   @media screen and (min-width: 1200px) {
     .nave {
-      font-size: 1.5em;
-      display: flex; } }
+      display: flex;
+      height: auto; } }
   @media screen and (min-width: 1200px) {
     .nave #btn-menu {
       display: none; } }
@@ -326,6 +331,10 @@ html {
     position: relative;
     top: 0.5em;
     left: 0.5em; }
+    @media screen and (min-width: 1200px) {
+      .nave span {
+        position: inherit;
+        padding: 0.5em; } }
   .nave a {
     text-decoration: none;
     color: #fff; }
@@ -358,18 +367,17 @@ html {
     @media screen and (min-width: 1200px) {
       .nave #menu {
         height: auto;
-        opacity: 1; } }
+        opacity: 1;
+        overflow-y: hidden; } }
     .nave #menu li {
-      border-bottom: 1px solid #595962;
       text-align: center;
       margin-right: 2em;
       margin-left: 2em; }
-      @media screen and (min-width: 1020px) and (orientation: landscape) {
+      @media screen and (min-width: 1020px) {
         .nave #menu li {
           margin: 0;
-          padding-right: 0.5em;
-          padding-left: 0.5em;
-          float: left; } }
+          padding: 0 0.5em;
+          float: right; } }
       .nave #menu li:hover {
         background-color: #595962; }
       .nave #menu li a {
@@ -383,38 +391,50 @@ html {
   background-color: #222;
   height: 33em;
   width: 100%; }
-  @media screen and (min-width: 375px) and (min-height: 667px) {
+  @media screen and (min-width: 730px) {
     #projetos {
-      height: 40em; } }
-  @media screen and (min-width: 1020px) and (orientation: landscape) {
+      height: 39em; } }
+  @media screen and (min-width: 1020px) {
     #projetos {
-      height: 34em; } }
+      height: 30em; } }
+  @media screen and (min-width: 1200px) {
+    #projetos {
+      width: 50%;
+      float: left;
+      height: 37em; } }
   #projetos h1 {
     text-align: center;
     padding: 1em;
     color: #fff; }
+    @media screen and (min-width: 1020px) {
+      #projetos h1 {
+        padding: 0.5em; } }
   #projetos a {
     position: absolute;
-    top: 82.3em; }
-    @media screen and (min-width: 375px) and (min-height: 667px) {
+    top: 82.5em; }
+    @media screen and (min-width: 730px) {
       #projetos a {
-        top: 86em; } }
-    @media screen and (min-width: 1020px) and (orientation: landscape) {
+        top: 88em; } }
+    @media screen and (min-width: 1020px) {
       #projetos a {
-        top: 66em; } }
+        top: 55.5em; } }
+    @media screen and (min-width: 1200px) {
+      #projetos a {
+        top: 62.5em; } }
 
 .slidesProj {
   display: none;
-  height: auto; }
-  @media screen and (min-width: 375px) and (min-height: 667px) {
+  height: 17em; }
+  @media screen and (min-width: 730px) {
     .slidesProj {
       height: 23em; } }
-  @media screen and (min-width: 1020px) and (orientation: landscape) {
+  @media screen and (min-width: 1020px) {
     .slidesProj {
-      height: 22em; } }
+      height: 16em; } }
   @media screen and (min-width: 1200px) {
     .slidesProj {
-      padding: 0 0.75em; } }
+      height: 21em;
+      padding: 0.75em; } }
   .slidesProj .caption-container {
     text-align: center;
     background-color: #222;
@@ -422,10 +442,15 @@ html {
     height: 8em;
     position: relative;
     top: -0.3em; }
-    @media screen and (min-width: 1020px) and (orientation: landscape) {
+    @media screen and (min-width: 1020px) {
       .slidesProj .caption-container {
         float: right;
-        right: 6em; } }
+        right: 5em;
+        width: 14em; } }
+    @media screen and (min-width: 1200px) {
+      .slidesProj .caption-container {
+        height: 21em;
+        background-color: transparent; } }
     .slidesProj .caption-container h2 {
       color: #ffb300;
       margin: 0.5em; }
@@ -437,7 +462,7 @@ html {
       width: 20%;
       float: left;
       margin: 0.5em; }
-      @media screen and (min-width: 1020px) and (orientation: landscape) {
+      @media screen and (min-width: 1020px) {
         .slidesProj .caption-container p {
           width: 100%; } }
       .slidesProj .caption-container p b {
@@ -445,7 +470,7 @@ html {
   .slidesProj .building {
     width: 100%;
     height: 100%; }
-    @media screen and (min-width: 1020px) and (orientation: landscape) {
+    @media screen and (min-width: 1020px) {
       .slidesProj .building {
         width: 50%; } }
 
@@ -453,8 +478,8 @@ html {
   cursor: pointer;
   position: absolute;
   width: auto;
-  padding: 16px;
-  top: 49em;
+  padding: 0.5em;
+  top: 50em;
   color: white;
   font-weight: bold;
   font-size: 2em;
@@ -463,10 +488,10 @@ html {
   -webkit-user-select: none; }
   .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8); }
-  @media screen and (min-width: 375px) and (min-height: 667px) {
+  @media screen and (min-width: 730px) {
     .prev, .next {
-      top: 53em; } }
-  @media screen and (min-width: 1020px) and (orientation: landscape) {
+      top: 54em; } }
+  @media screen and (min-width: 1020px) {
     .prev, .next {
       display: none; } }
 
@@ -476,25 +501,20 @@ html {
 
 #row {
   display: none; }
-  @media screen and (min-width: 1020px) and (orientation: landscape) {
+  @media screen and (min-width: 1020px) {
     #row {
       display: block;
-      padding-top: 0.75em; } }
-  @media screen and (min-width: 1020px) and (orientation: landscape) {
-    #row {
+      padding-top: 0.75em;
       padding-left: 0.75em; } }
   #row:after {
     content: "";
     clear: both; }
   #row .column {
     float: left;
-    width: 5em; }
-    @media screen and (min-width: 1020px) and (orientation: landscape) {
-      #row .column {
-        width: 7em; } }
-    @media screen and (min-width: 1200px) {
-      #row .column {
-        width: 8em; } }
+    width: 5em;
+    /*@include desktop{
+    	width: 8em;
+    }*/ }
     #row .column .mini {
       cursor: pointer;
       opacity: 0.6;
@@ -511,21 +531,29 @@ html {
 .slidesHome {
   display: none;
   overflow: hidden;
-  height: 36em; }
-  @media screen and (min-width: 375px) and (min-height: 667px) {
+  height: 36rem; }
+  @media screen and (min-width: 730px) {
     .slidesHome {
-      height: 42em; } }
-  @media screen and (min-width: 1020px) and (orientation: landscape) {
+      height: 43rem; } }
+  @media screen and (min-width: 1020px) {
     .slidesHome {
-      height: 38em; } }
+      height: 32em; } }
+  @media screen and (min-width: 1200px) {
+    .slidesHome {
+      height: 39em; } }
   .slidesHome img {
     height: 100%;
     width: auto;
-    left: -40%;
+    left: -65%;
     position: relative; }
-    @media screen and (min-width: 1020px) and (orientation: landscape) {
+    @media screen and (min-width: 730px) {
       .slidesHome img {
-        left: 0;
+        left: -35%; } }
+    @media screen and (min-width: 1020px) {
+      .slidesHome img {
+        left: 0; } }
+    @media screen and (min-width: 1200px) {
+      .slidesHome img {
         width: 100%; } }
   .slidesHome .mensagem {
     background-color: rgba(42, 85, 136, 0.73);
@@ -538,11 +566,16 @@ html {
     text-align: center;
     color: #fff;
     font-size: 1.2em; }
-    @media screen and (min-width: 1020px) and (orientation: landscape) {
+    @media screen and (min-width: 1020px) {
+      .slidesHome .mensagem {
+        font-size: 1.5em;
+        top: -40%;
+        left: 50%; } }
+    @media screen and (min-width: 1200px) {
       .slidesHome .mensagem {
         font-size: 2em;
-        top: -11em;
-        left: 65%; } }
+        top: -10em;
+        left: 70%; } }
 
 .last {
   display: block; }
@@ -557,42 +590,46 @@ html {
     opacity: 1; } }
 #sobre {
   position: relative; }
-  @media screen and (min-width: 1020px) and (orientation: landscape) {
-    #sobre {
-      padding-bottom: 3em; } }
   @media screen and (min-width: 1200px) {
     #sobre div {
-      padding: 0 8em; } }
+      padding: 0 12em;
+      margin-bottom: 4em; } }
   #sobre a {
     top: -4em;
     position: absolute; }
-    @media screen and (min-width: 1020px) and (orientation: landscape) {
+    @media screen and (min-width: 1200px) {
       #sobre a {
         top: -5em; } }
   #sobre h1 {
     text-align: center; }
-    @media screen and (min-width: 1020px) and (orientation: landscape) {
+    @media screen and (min-width: 1200px) {
       #sobre h1 {
-        padding: 0.5em; } }
+        padding: 1em; } }
   #sobre #texto {
     text-align: justify;
     padding: 1.5em; }
+    @media screen and (min-width: 1020px) {
+      #sobre #texto {
+        padding: 0 1.5em; } }
   #sobre img {
     width: 100%; }
-    @media screen and (min-width: 1020px) and (orientation: landscape) {
+    @media screen and (min-width: 1020px) {
       #sobre img {
         width: 50%;
         float: left;
         margin: 1em; } }
+    @media screen and (min-width: 1200px) {
+      #sobre img {
+        margin-top: 0em;
+        width: 40%; } }
 
 #contato {
   position: relative; }
-  @media screen and (min-width: 1020px) and (orientation: landscape) {
+  @media screen and (min-width: 1200px) {
     #contato {
-      height: 25em; } }
-  @media screen and (min-width: 1020px) and (orientation: landscape) {
-    #contato {
-      height: 40em; } }
+      width: 50%;
+      float: left;
+      background-color: #eee; } }
   #contato a {
     position: absolute;
     top: -4em; }
@@ -603,18 +640,19 @@ html {
   #contato form {
     padding: 2em;
     padding-top: 0; }
-    @media screen and (min-width: 1020px) and (orientation: landscape) {
+    @media screen and (min-width: 1020px) {
       #contato form {
-        padding: 0 15em; }
-        #contato form .contato-dado {
+        padding: 0 6em; }
+        #contato form .contato-dado, #contato form #textoarea {
           width: 100%; }
         #contato form .contato-regiao {
           width: 30%; }
-        #contato form #textoarea {
-          width: 100%; }
         #contato form div {
           float: left;
           padding: 0.5em; } }
+    @media screen and (min-width: 1200px) {
+      #contato form {
+        padding: 0 2em; } }
     #contato form input, #contato form textarea, #contato form select {
       width: 100%;
       padding-top: 0.3em;
@@ -622,26 +660,29 @@ html {
       border: 1px solid #ccc;
       border-radius: 4px;
       margin-top: 0.5em;
-      margin-bottom: 0.5em; }
+      margin-bottom: 0.5em;
+      background-color: #fff; }
     #contato form option {
-      font-weight: bold;
-      height: 2em; }
+      font-weight: bold; }
+      @media screen and (min-width: 730px) {
+        #contato form option {
+          font-size: 0.5em; } }
+      @media screen and (min-width: 1200px) {
+        #contato form option {
+          font-size: 1em; } }
     #contato form input[type=submit] {
       background-color: #449dda;
       padding: 0.5em;
       font-size: 2em;
       color: #FFF; }
-      @media screen and (min-width: 1020px) and (orientation: landscape) {
-        #contato form input[type=submit] {
-          width: 100%;
-          float: left;
-          margin: 0.2em;
-          margin-top: 1em; } }
 
 footer {
   background-color: #343a40;
   padding: 0.1em;
   padding-bottom: 1em; }
+  @media screen and (min-width: 1200px) {
+    footer {
+      clear: both; } }
   footer ul {
     list-style-type: none;
     display: flex;
@@ -660,7 +701,7 @@ footer {
         background-position-x: center;
         background-position-y: center;
         background-size: cover; }
-        @media screen and (min-width: 1020px) and (orientation: landscape) {
+        @media screen and (min-width: 1200px) {
           footer ul li a {
             filter: grayscale(100%); }
             footer ul li a:hover {
