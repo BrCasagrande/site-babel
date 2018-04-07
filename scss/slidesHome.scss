@@ -1,23 +1,31 @@
 .slidesHome{
 	display: none;
 	overflow: hidden;
-	height: 36em;
+	height: 36rem;
 
-	@include iphone6{
-		height: 42em;
+	@include tablet{
+		height: 43rem;
 	}
 	@include tabletLand{
-		height: 38em;
-	}	
+		height: 32em;
+	}
+	@include desktop{
+		height: 39em;
+	}
 	
 	img{
 		height: 100%;
 		width: auto;
-		left: -40%;
+		left: -65%;
 		position: relative;
 
-		@include tabletLand{ 
+		@include tablet{ 
+			left: -35%;
+		 }
+		 @include tabletLand{ 
 			left: 0;
+		 }
+		 @include desktop{ 
 			width: 100%;
 		 }
 	}
@@ -35,9 +43,14 @@
 	    font-size: 1.2em;
 
 	    @include tabletLand{
+	    	font-size: 1.5em;
+	    	top: -40%;
+	    	left: 50%;
+	    }
+	    @include desktop{
 	    	font-size: 2em;
-	    	top: -11em;
-	    	left: 65%;
+		    top: -10em;
+		    left: 70%;
 	    }
 
 	}

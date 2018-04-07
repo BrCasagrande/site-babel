@@ -3,6 +3,9 @@ footer{
 	padding: 0.1em;
 	padding-bottom: 1em;
 
+	@include desktop{
+		clear: both;
+	}
 	ul{
 		list-style-type: none;
 		display: flex;
@@ -24,7 +27,7 @@ footer{
     			background-position-y: center; 
     			background-size: cover;   
 
-    			@include tabletLand{
+    			@include desktop{
     				filter: grayscale(100%);
 
     				&:hover{

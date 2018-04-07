@@ -1,30 +1,34 @@
 #sobre{
 	position: relative;
-
-	@include tabletLand{
-		padding-bottom: 3em;
-	}
+	
 	@include desktop{
-			div{padding: 0 8em;}
+		div{
+		    padding: 0 12em;
+    		margin-bottom: 4em;
 		}
+	}
 	a{
 		top: -4em;
 		position: absolute;
-
-		@include tabletLand{
+		
+		@include desktop{
 			top: -5em;
 		}
 	}
 	h1{		
-		text-align: center;
+		text-align: center;	
 
-		@include tabletLand{
-			padding: 0.5em;
-		}
+		@include desktop{
+			padding: 1em;
+		}	
 	}
 	#texto{
 		text-align: justify;
 		padding: 1.5em;	
+
+		@include tabletLand{
+			padding: 0 1.5em;
+		}
 	}
 	img{
 		width: 100%;
@@ -33,6 +37,11 @@
 			    width: 50%;
 			    float: left;
 			    margin: 1em;
+		}
+
+		@include desktop{
+    		margin-top: 0em;
+    		width: 40%;
 		}
 	}
 }

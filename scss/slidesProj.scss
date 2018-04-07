@@ -4,27 +4,39 @@
 	height: 33em;
 	width: 100%;
 
-	@include iphone6{
-		height: 40em;
+	@include tablet{
+		height: 39em;
 	}
 
 	@include tabletLand{
-		height: 34em;
+		height: 30em;
+	}
+	@include desktop{
+		width: 50%;
+		float: left;
+		height: 37em;
 	}
 	h1{
 		text-align: center;
 		padding: 1em;
 		color: #fff;
+
+		@include tabletLand{
+			padding: 0.5em;
+		}
 	}
 	a{
 		position: absolute;
-		top: 82.3em;	
+		top: 82.5em;	
 				
-		@include iphone6{		
-			top: 86em;		
+		@include tablet{		
+			top: 88em;		
 		}
 		@include tabletLand{
-			top: 66em;
+			top: 55.5em;
+		}
+		@include desktop{
+			top: 62.5em;
 		}
 	}	
 	
@@ -32,16 +44,17 @@
 	
 .slidesProj{
 	display: none;	
-	height: auto;	
+	height: 17em;	
 
-	@include iphone6{
+	@include tablet{
 		height: 23em;		
 	}
 	@include tabletLand{
-    	height: 22em;
+    	height: 16em;
 	}
 	@include desktop{
-    	padding: 0 0.75em;
+    	height: 21em;
+    	padding: 0.75em;
 	}
 	
 	.caption-container {
@@ -52,10 +65,15 @@
 	  position: relative;
 	  top: -0.3em;
 
-	  @include tabletLand{
-	  	float: right;
-	  	right: 6em;
-	  }
+		@include tabletLand{
+			float: right;
+			right: 5em;
+			width: 14em;
+		}
+		@include desktop{
+			height: 21em;
+			background-color: transparent;
+		}
 	  h2{
 	  	color: #ffb300;
 	  	margin: 0.5em;	  	
@@ -85,8 +103,8 @@
 		height: 100%;		
 
 		@include tabletLand{	
-			width: 50%;		
-		}				
+			width: 50%;	
+		}			
 	}			
 }
 
@@ -94,8 +112,8 @@
 	cursor: pointer;
 	position: absolute;
 	width: auto;
-	padding: 16px;
-	top: 49em;
+	padding: 0.5em;
+    top: 50em;
 	color: white;
 	font-weight: bold;
 	font-size: 2em;
@@ -107,8 +125,8 @@
 	  background-color: rgba(0, 0, 0, 0.8);
 	}
 
-	@include iphone6{
-		top: 53em;
+	@include tablet{
+		top: 54em;
 	}
 
 	@include tabletLand{
@@ -126,8 +144,6 @@ display: none;
 	@include tabletLand{
 		display: block;	
 		padding-top: 0.75em;
-	}
-	@include tabletLand{
 		padding-left: 0.75em;
 	}
 
@@ -139,12 +155,10 @@ display: none;
 		float: left;
 		width: 5em;
 
-		@include tabletLand{
-			width: 7em;
-		}
-		@include desktop{
+		
+		/*@include desktop{
 			width: 8em;
-		}
+		}*/
 		.mini{
 			cursor: pointer;
 			opacity: 0.6;

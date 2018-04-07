@@ -1,16 +1,15 @@
 #contato{
-	position: relative;
+	position: relative;	
 
-	@include tabletLand{
-		height: 25em;
-	}
-	@include tabletLand{
-		height: 40em;
-	}
 
+	@include desktop{
+		width: 50%;
+		float: left;
+		background-color: #eee;
+	}
 	a{
 		position: absolute;
-		top: -4em;
+		top: -4em;		
 	}
 	h1{
 		padding-top: 0.5em;
@@ -22,25 +21,26 @@
 		padding: 2em;
 		padding-top: 0;
 
-
 		@include tabletLand{
-			padding: 0 15em;
+			padding: 0 6em;
 
-			.contato-dado{
+			.contato-dado, #textoarea{
 				width: 100%;			
 			}
 			.contato-regiao{
 				width: 30%;	
 			}
-			#textoarea{
-				width: 100%;	
-			}
+			
 			div{
 				float: left;
 				padding: 0.5em;
 			}
 		}
+		
 
+		@include desktop{
+			padding: 0 2em;
+		}
 
 		input, textarea, select{
 			width: 100%;
@@ -50,26 +50,24 @@
 		    border-radius: 4px;
 		    margin-top: 0.5em;
 		    margin-bottom: 0.5em;
+		    background-color: #fff;
 		}
 		
 		option{
 			font-weight: bold;
-			height: 2em;
+			@include tablet{
+				font-size: 0.5em;
+			}
+			@include desktop{
+				font-size: 1em;
+			}
 		}
 		
-
 		input[type=submit]{
 			background-color: #449dda;
 			padding: 0.5em;
 			font-size: 2em;
-			color: #FFF;
-
-			@include tabletLand{
-				width: 100%;
-			    float: left;
-			    margin: 0.2em;
-			    margin-top: 1em;
-			}
+			color: #FFF;	
 		}		
 	}
 }

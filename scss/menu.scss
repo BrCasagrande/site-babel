@@ -3,15 +3,12 @@
 	width: 100%;
 	background-color: $cor-menu;
 	z-index: 999;
-	font-size: 1.5em;
 	top: 0;	
-
-	@include tabletLand{
-		font-size: 1.75em;
-	}
+	font-size: 1.5em;
+	
 	@include desktop{
-		font-size: 1.5em;
 		display: flex;
+		height: auto;	
 	}
 	@include desktop{
 		#btn-menu{
@@ -22,6 +19,11 @@
 	    position: relative;
 	    top: 0.5em;
 	    left: 0.5em;
+
+	    @include desktop{
+	    	position: inherit;
+	    	padding: 0.5em;
+	    }
 	}
 
 	a{
@@ -61,20 +63,18 @@
 		@include desktop{
 			height: auto;
 			opacity: 1;
+			overflow-y:hidden; 
 		}
 		
 		li{
-
-			border-bottom: 1px solid #595962;
 			text-align: center;
 			margin-right: 2em;
 			margin-left: 2em;
 
 			@include tabletLand{
 				margin: 0;
-				padding-right: 0.5em;
-				padding-left: 0.5em;
-				float: left;
+				padding: 0 0.5em;
+				float: right;
 			}
 			
 			&:hover{

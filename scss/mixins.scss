@@ -1,11 +1,16 @@
-@mixin iphone6{
-	@media screen and (min-width: 375px) and (min-height: 667px){
+@mixin phone{
+	@media screen and (min-width: 375px){
+		@content;
+	}
+}
+@mixin tablet{
+	@media screen and (min-width: 730px){
 		@content;
 	}
 }
 
 @mixin tabletLand{
-	@media screen and (min-width: 1020px) and (orientation: landscape) { 	
+	@media screen and (min-width: 1020px){ 	
 		@content;
 	}
 }
