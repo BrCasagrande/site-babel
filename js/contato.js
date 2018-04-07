@@ -6,6 +6,11 @@
 	let selectCons = document.getElementById("construcao");
 
 
+const init = () =>{
+	selecionaEstado();
+	listaConstrucao();
+}
+
 document.getElementById("btn").addEventListener('click', function(event) {
 	event.preventDefault();
 
@@ -17,11 +22,24 @@ estado.addEventListener('click', () =>{
 	selecionaCidade(index);
 });
 
-function limparContato(){
+const verificaCampo = () =>{
+	const pattern = /^\w*(\.\w*)?@\w*\.[a-z]+(\.[a-z]+)?$/;
+	/*if(nome.value == ""){
+		alert('Preencha o campo Nome!');
+	}
+	if(email.value == "" || email.value != pattern){
+		alert('Preencha o campo email corretamente!');
+	}*/
+
+	console.log(pattern == "bruno@gmail.com");
+	console.log(pattern);
+}
+//verificaCampo();
+const limparContato = () =>{
 	nome.value = ""; 
 	email.value = ""; 
-	estado.value = estado[0].value; 
-	cidade.value = ""; 
+	estado.value = estado[estado.length]; 
+	cidade.innerHTML = ""; 
 	descricao.value = ""; 
 	selectCons.value = selectCons[0].label; 
 	nome.focus();
@@ -33,10 +51,11 @@ const selecionaEstado = () =>{
 		estado.innerHTML += 
 		`<option value="${estadoLista[i].sigla}">${estadoLista[i].sigla}</option>`;
 	}
-	
+	estado.innerHTML +=`<option value=""></option>`;
+	estado.value = estado[i].value;
 }
 
-const selecionaCidade = (index) =>{
+const selecionaCidade = index =>{
 	let cidadeLista = estados.estados[index].cidades;
 	cidade.innerHTML = "";
 
@@ -54,5 +73,5 @@ const listaConstrucao = () =>{
 	}
 }
 
-selecionaEstado();
-listaConstrucao();
+
+init();
