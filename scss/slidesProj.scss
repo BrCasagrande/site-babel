@@ -36,7 +36,7 @@
 			top: 55.5em;
 		}
 		@include desktop{
-			top: 62.5em;
+			top: 68.5em;
 		}
 	}	
 	
@@ -72,6 +72,7 @@
 		}
 		@include desktop{
 			height: 21em;
+			right: 0;
 			background-color: transparent;
 		}
 	  h2{
@@ -104,6 +105,9 @@
 
 		@include tabletLand{	
 			width: 50%;	
+		}	
+		@include desktop{	
+			width: 60%;	
 		}			
 	}			
 }

@@ -1,12 +1,6 @@
 #sobre{
-	position: relative;
+	position: relative;	
 	
-	@include desktop{
-		div{
-		    padding: 0 12em;
-    		margin-bottom: 4em;
-		}
-	}
 	a{
 		top: -4em;
 		position: absolute;
@@ -40,8 +34,10 @@
 		}
 
 		@include desktop{
-    		margin-top: 0em;
-    		width: 40%;
+    		float: right;    		
+		    width: 50%;
+    		margin: 0;
+    		margin-left: 1em;
 		}
 	}
 }
