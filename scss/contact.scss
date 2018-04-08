@@ -39,13 +39,12 @@
 		
 
 		@include desktop{
-			padding: 0 2em;
+			padding: 0.3em 2em;
 		}
 
 		input, textarea, select{
 			width: 100%;
-		    padding-top: 0.3em;
-		    padding-bottom: 0.3em;
+		    padding: 0.3em;
 		    border: 1px solid #ccc;
 		    border-radius: 4px;
 		    margin-top: 0.5em;
