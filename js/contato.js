@@ -18,7 +18,7 @@ document.getElementById("btn").addEventListener('click', function(event) {
 
 estado.addEventListener('click', () =>{
 	let index = estado.selectedIndex;
-	selecionaCidade(index);
+	selecionaCidade(index-1);
 });
 
 const verificaCampo = () =>{
@@ -36,10 +36,6 @@ const verificaCampo = () =>{
 	else{limparContato()};
 }
 
-console.log(true != false);
-console.log(!false);
-
-
 const limparContato = () =>{
 	nome.value = ""; 
 	email.value = ""; 
@@ -52,32 +48,33 @@ const limparContato = () =>{
 
 const selecionaEstado = () =>{
 	let estadoLista = estados.estados;
-	for(i=0; i<estadoLista.length; i++){
+	estado.innerHTML +=`<option value="">Selecione</option>`;
+	estado.value = "";
+	for(i in estadoLista){
 		estado.innerHTML += 
 		`<option value="${estadoLista[i].sigla}">${estadoLista[i].sigla}</option>`;
 	}
-	estado.innerHTML +=`<option value="">Selecione</option>`;
-	estado.value = estado[i].value;
+
 }
 
 const selecionaCidade = index =>{
 	let cidadeLista = estados.estados[index].cidades;
 	cidade.innerHTML = "";
-
-	for(i=0; i<cidadeLista.length; i++){		
-		cidade.innerHTML += 
-		`<option>${cidadeLista[i]}</option>`;
-	}
+		for(i in cidadeLista){		
+			cidade.innerHTML += 
+			`<option>${cidadeLista[i]}</option>`;
+		}		
+	
 }
 const listaConstrucao = () =>{
 	let listaCons = ["Casa","Empresa","Prédio Residencial","Prédio Comercial"];
+	selectCons.innerHTML +=`<option value="">Selecione</option>`;
 
-	for(i=0; i<listaCons.length; i++){		
+	for(i in listaCons){		
 		selectCons.innerHTML += 
 		`<option>${listaCons[i]}</option>`;
 	}
-	selectCons.innerHTML +=`<option value="">Selecione</option>`;
-	selectCons.value = selectCons[i].value;
+	selectCons.value = "";
 }
 
 
