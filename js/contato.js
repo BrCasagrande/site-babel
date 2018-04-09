@@ -18,7 +18,8 @@ document.getElementById("btn").addEventListener('click', function(event) {
 
 estado.addEventListener('click', () =>{
 	let index = estado.selectedIndex;
-	selecionaCidade(index-1);
+	if(estado.value == ""){cidade.innerHTML = "";}
+	else{selecionaCidade(index-1);}
 });
 
 const verificaCampo = () =>{
@@ -39,10 +40,10 @@ const verificaCampo = () =>{
 const limparContato = () =>{
 	nome.value = ""; 
 	email.value = ""; 
-	estado.value = estado[estado.length]; 
+	estado.value = ""; 
 	cidade.innerHTML = ""; 
 	descricao.value = ""; 
-	selectCons.value = selectCons[selectCons.length]; 
+	selectCons.value = ""; 
 	nome.focus();
 }
 
