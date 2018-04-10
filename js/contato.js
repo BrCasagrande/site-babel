@@ -6,7 +6,8 @@
 	let selectCons = document.getElementById("construcao");
 
 const init = () =>{
-	selecionaEstado();
+	loadDoc("https://github.com/BrCasagrande/site-babel/blob/master/js/estados.json",
+		selecionaEstado);
 	listaConstrucao();
 }
 
@@ -47,8 +48,9 @@ const limparContato = () =>{
 	nome.focus();
 }
 
-const selecionaEstado = () =>{
-	let estadoLista = estados.estados;
+const selecionaEstado = (doc) =>{
+	console.log(doc.estados);
+	let estadoLista = doc.estados;
 	estado.innerHTML +=`<option value="">Selecione</option>`;
 	estado.value = "";
 	for(i in estadoLista){
@@ -59,7 +61,7 @@ const selecionaEstado = () =>{
 }
 
 const selecionaCidade = index =>{
-	let cidadeLista = estados.estados[index].cidades;
+	let cidadeLista = doc.estados[index].cidades;
 	cidade.innerHTML = "";
 		for(i in cidadeLista){		
 			cidade.innerHTML += 
@@ -78,5 +80,18 @@ const listaConstrucao = () =>{
 	selectCons.value = "";
 }
 
+
+function loadDoc(file, func) {
+  var xhttp = new XMLHttpRequest();
+  doc = "";
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      doc = JSON.parse(this.responseText);
+ 		func(doc);  
+    }
+  };
+  xhttp.open("GET", file, true);
+  xhttp.send();
+}
 
 init();
