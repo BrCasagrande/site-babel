@@ -6,7 +6,7 @@
 	let selectCons = document.getElementById("construcao");
 
 const init = () =>{
-	loadDoc("https://raw.githubusercontent.com/BrCasagrande/site-babel/master/js/estados.json",
+	loadDoc("js/estados.json",
 		selecionaEstado);
 	listaConstrucao();
 }
