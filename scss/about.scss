@@ -1,6 +1,7 @@
 #sobre{
-	position: relative;	
+	position: relative;		
 	
+	.animation{opacity: 0;}
 	a{
 		top: -4em;
 		position: absolute;
@@ -13,7 +14,10 @@
 		text-align: center;	
 
 		@include desktop{
-			padding: 1em;
+			    padding: 1em;
+			    background-color: #154d69;
+			    margin: 0;
+			    color: #fff;
 		}	
 	}
 	#texto{

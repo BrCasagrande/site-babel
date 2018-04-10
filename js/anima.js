@@ -1,20 +1,18 @@
-document.addEventListener('scroll', anima);
+document.addEventListener('scroll', slideRight);
 
-function anima(){
+function slideRight(){
   var el = document.getElementsByClassName('animation');
   for(i=0; i<el.length;i++){
-  var imagePos = el[i].offsetTop;
-  var imageHeight = el[i].clientHeight;
+  var elementPos = el[i].offsetTop;
+  var elementHeight = el[i].clientHeight;
   var topOfWindow = window.scrollY;
 
-  console.log(imagePos+(imageHeight*3));
-  //console.log(imageHeight);
-  console.log(topOfWindow);
-
-  if(topOfWindow > imagePos){
+  if(topOfWindow > elementPos){
     el[i].classList.add("slideRight");
+    el[i].style.opacity = "1";
   } else {
       el[i].classList.remove("slideRight");
+      el[i].style.opacity = "0";
     }
   }
 }

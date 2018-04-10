@@ -602,6 +602,8 @@ html {
     top: -40%; } }
 #sobre {
   position: relative; }
+  #sobre .animation {
+    opacity: 0; }
   #sobre a {
     top: -4em;
     position: absolute; }
@@ -612,7 +614,10 @@ html {
     text-align: center; }
     @media screen and (min-width: 1200px) {
       #sobre h1 {
-        padding: 1em; } }
+        padding: 1em;
+        background-color: #154d69;
+        margin: 0;
+        color: #fff; } }
   #sobre #texto {
     text-align: justify;
     padding: 1.5em; }
