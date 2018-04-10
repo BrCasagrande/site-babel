@@ -6,8 +6,7 @@
 	let selectCons = document.getElementById("construcao");
 
 const init = () =>{
-	loadDoc("js/estados.json",
-		selecionaEstado);
+	loadDoc("js/estados.json", selecionaEstado);
 	listaConstrucao();
 }
 
@@ -49,7 +48,6 @@ const limparContato = () =>{
 }
 
 const selecionaEstado = (doc) =>{
-	console.log(doc.estados);
 	let estadoLista = doc.estados;
 	estado.innerHTML +=`<option value="">Selecione</option>`;
 	estado.value = "";

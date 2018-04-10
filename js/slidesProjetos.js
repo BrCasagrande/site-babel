@@ -1,10 +1,12 @@
-var predio = construcao.predio;
+function carregaSlides(){
+  var predio = doc.predio;
+  console.log(predio.length);
 var captionText = document.getElementById("caption");
 for(x=0; x<predio.length; x++){
 
-	document.getElementById("slides").innerHTML += 
-	`<div class="slidesProj">
-	      <img class="building" src="${predio[x].foto}" >
+  document.getElementById("slides").innerHTML += 
+  `<div class="slidesProj">
+        <img class="building" src="${predio[x].foto}" >
         
         <div class="caption-container">
           <h2>Bairro ${predio[x].bairro}</h2>
@@ -14,12 +16,12 @@ for(x=0; x<predio.length; x++){
           <p><b>Banheiro:</b> ${predio[x].banheiro}</p>
           <p><b>Vaga:</b> ${predio[x].vaga}</p>
         </div>
-	  </div>`;
+    </div>`;
 
     
 
-  	document.getElementById("row").innerHTML +=
-  	`<div class="column">
+    document.getElementById("row").innerHTML +=
+    `<div class="column">
       <img class="mini" src="${predio[x].foto}" 
       onclick="currentSlide(${x+1})" alt="Bairro ${predio[x].bairro}">
     </div>`;
@@ -31,8 +33,15 @@ document.getElementById("slides").innerHTML +=
      <span class="next" onclick="plusSlides(1)">&#10095;</span>`;
 
 
+var dots = document.getElementsByClassName("mini");
+var slides = document.getElementsByClassName("slidesProj");
+slides[0].style.display = "block";
+dots[0].className += " active";
+}
+
 var slideIndex = 1;
-showSlides(slideIndex);
+//showSlides(slideIndex);
+
 
 
 // Next/previous controls
@@ -63,3 +72,17 @@ function showSlides(n) {
  
 }
 
+
+function loadDoc(file, func) {
+  var xhttp = new XMLHttpRequest();
+  doc = "";
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      doc = JSON.parse(this.responseText);
+    func(doc);  
+    }
+  };
+  xhttp.open("GET", file, true);
+  xhttp.send();
+}
+loadDoc("js/construcao.json",carregaSlides);
