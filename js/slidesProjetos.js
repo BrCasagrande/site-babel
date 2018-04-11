@@ -6,7 +6,7 @@ for(x=0; x<predio.length; x++){
 
   document.getElementById("slides").innerHTML += 
   `<div class="slidesProj">
-        <img  class="building" src="${predio[x].foto}"  Cache-Control:public, max-age=604800>
+        <img  class="building" src="${predio[x].foto}">
         
         <div class="caption-container">
           <h2>Bairro ${predio[x].bairro}</h2>
