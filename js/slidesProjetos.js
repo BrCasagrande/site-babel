@@ -1,6 +1,5 @@
 function carregaSlides(){
   var predio = doc.predio;
-  console.log(predio.length);
 var captionText = document.getElementById("caption");
 for(x=0; x<predio.length; x++){
 
