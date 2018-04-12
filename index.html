@@ -1,1 +1,136 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Babel Arquitetura</title><link rel="icon" href="img/logo.jpg" ><link rel="stylesheet" href="css/index.min.css"></head><body><header><nav class="nave"><span><a href="#">Babel Arquitetura</a></span><button id="btn-menu" class="menu-abrir toogle">&#9776;</button><ul id="menu"><li class="menu-item toogle"><a href="#">Home</a></li><li class="menu-item toogle"><a href="#tsobre">Sobre</a></li><li class="menu-item toogle"><a href="#tproj">Projetos</a></li><li class="menu-item toogle"><a href="#tcontato">Contato</a></li></ul></nav></header><div class="container"><section><div class="slidesHome fade"><img src="img/ini1.jpg"><div class="mensagem animaSlide"><p>Casas auto sustentáveis com designs inovadores.</p></div></div><div class="slidesHome fade"><img src="img/ini2.jpg"><div class="mensagem animaSlide"><p>Os melhores Engenheiros e Designers do Brasil.</p></div></div><div class="slidesHome fade"><img src="img/ini3.jpg"><div class="mensagem animaSlide"><p>Cômodos elegantes utilizando o espaço de forma eficiente.</p></div></div></section><section id="sobre"><a name="tsobre"></a><div class="animation"><h1>Sobre</h1><img src="img/1.png"><div id="texto"><p>Somos um escritório de arquitetura aberto em 2001 e formado por arquitetos que acreditam e trabalham para tornar a arquitetura mais humana, elegante e criativa.</p><p>Reconhecidos por projetos e obras marcantes, a Babel Arquitetura é um escritório premiado, com foco na construção do espaço de forma eficiente.</p><p>Nosso diferencial está no desenvolvimento de conceitos que privilegiam a racionalização do espaço e o cuidado com o meio ambiente, nós atuamos com responsabilidade no desenvolvimento de projetos sustentáveis para a redução do consumo de energético e melhoria da qualidade de vida de nossos clientes.</p></div></div></section><section id="projetos"><a name="tproj"></a><h1>Projetos</h1><div id="slides"></div><div id="row"></div></section><section id="contato"><a name="tcontato"></a><h1>Contato</h1><form><div class="contato-dado"><label><b>Nome</b></label><input type="text" name="nome" id="nome"></div><div class="contato-dado"><label><b>e-mail</b></label><input type="email" name="email" id="email" placeholder="Ex: babel_ark@gmail.com"></div><div class="contato-regiao"><label><b>Estado</b></label><select name="estado" id="estado"></select></div><div class="contato-regiao"><label><b>Cidade</b></label><select type="text" name="cidade" id="cidade"></select></div><div class="contato-regiao"><label><b>Tipo de Projeto</b></label><select name="projeto" id="construcao"></select></div><div id="textoarea"><label><b>Descrição</b></label><textarea name="descricao" id="descricao" rows="5" placeholder="Escreva sobre a construção"></textarea></div><input type="submit" name="enviar" value="Enviar" id="btn"></form></section><footer><ul><li><a href="https://www.linkedin.com/in/bruno-pasquotto-casagrande-690910138/" name="linkedin"></a></li><li><a href="https://github.com/BrCasagrande" name="github"></a></li><li><a href="#" name="facebook"></a></li><li><a href="#" name="twitter"></a></li><li><a href="#" name="youtube"></a></li></ul></footer></div><script async src="js/index.min.js"></script></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Babel Arquitetura</title>
+	<link rel="icon" href="img/logo.jpg" >
+	<link rel="stylesheet" href="css/index.min.css" media="none" onload="if(media!='all')media='all'">
+	<noscript><link rel="stylesheet" href="css/style.css"></noscript>
+	<!--link rel="stylesheet" href="css/index.min.css"-->
+</head>
+<body>
+	<header>
+		<nav class="nave">
+			<span><a href="#">Babel Arquitetura</a></span>
+			<button id="btn-menu" class="menu-abrir toogle">&#9776;</button>
+			<ul id="menu">				
+				<li class="menu-item toogle"><a href="#">Home</a></li>
+				<li class="menu-item toogle"><a href="#tsobre">Sobre</a></li>
+				<li class="menu-item toogle"><a href="#tproj">Projetos</a></li>
+				<li class="menu-item toogle"><a href="#tcontato">Contato</a></li>
+			</ul>
+		</nav>
+	</header>	
+
+	<div class="container">
+		
+		<!--Home-->
+		<section>
+			<div class="slidesHome fade">
+				<img src="img/ini1.jpg">
+				<div class="mensagem animaSlide">
+					<p>
+						Casas auto sustentáveis com designs inovadores.
+					</p>				
+				</div>
+			</div>
+			<div class="slidesHome fade">
+				<img src="img/ini2.jpg">
+				<div class="mensagem animaSlide">
+					<p>
+						Os melhores Engenheiros e Designers do Brasil.
+					</p>				
+				</div>
+			</div>
+			<div class="slidesHome fade">
+				<img src="img/ini3.jpg">
+				<div class="mensagem animaSlide">
+					<p>
+						Cômodos elegantes utilizando o espaço de forma eficiente.
+					</p>				
+				</div>
+			</div>
+			
+		</section><!--Home End-->
+
+		<!--About-->
+		<section id="sobre">
+			<a name="tsobre"></a>
+			<div class="animation">
+			<h1>Sobre</h1>
+				<img src="img/1.png">
+				<div id="texto">
+					<p>
+						Somos um escritório de arquitetura aberto em 2001 e formado por arquitetos que acreditam e trabalham para tornar a arquitetura mais humana, elegante e criativa.
+					</p>
+					<p>
+						Reconhecidos por projetos e obras marcantes, a Babel Arquitetura é um escritório premiado, com foco na construção do espaço de forma eficiente.
+					</p>
+					<p>
+						Nosso diferencial está no desenvolvimento de conceitos que privilegiam a racionalização do espaço e o cuidado com o meio ambiente, nós atuamos com responsabilidade no desenvolvimento de projetos sustentáveis para a redução do consumo de energético e melhoria da qualidade de vida de nossos clientes.
+					</p>
+				</div>
+			</div>		
+		</section><!--About End-->
+
+		<!--Slides-->
+		<section id="projetos">
+			<a name="tproj"></a>
+			<h1>Projetos</h1>
+			<div id="slides">			
+			</div>
+			<!-- Thumbnail images -->
+			<div id="row"></div>		
+		</section><!--Slides End-->
+
+		<!--Contato-->
+		<section id="contato">
+			<a name="tcontato"></a>
+				<h1>Contato</h1>
+				<form>	
+					<div class="contato-dado">
+						<label><b>Nome</b></label>
+						<input type="text" name="nome" id="nome">	
+					</div>
+					<div class="contato-dado">
+						<label><b>e-mail</b></label>
+						<input type="email" name="email" id="email" placeholder="Ex: babel_ark@gmail.com">
+					</div>
+					<div class="contato-regiao">
+						<label><b>Estado</b></label>
+						<select name="estado" id="estado"></select>					
+					</div>
+					<div class="contato-regiao">
+						<label><b>Cidade</b></label>
+						<select type="text" name="cidade" id="cidade"></select>
+					</div>
+				
+					<div class="contato-regiao">
+						<label><b>Tipo de Projeto</b></label>
+						<select name="projeto" id="construcao"></select>
+					</div>	
+					<div id="textoarea">
+						<label><b>Descrição</b></label>
+						<textarea name="descricao" id="descricao" rows="5" placeholder="Escreva sobre a construção"></textarea>							
+					</div>
+					<input type="submit" name="enviar" value="Enviar" id="btn">
+				</form>	
+		</section><!--Contato End-->
+
+		<footer>
+			<ul>
+				<li><a href="https://www.linkedin.com/in/bruno-pasquotto-casagrande-690910138/" name="linkedin"></a></li>
+				<li><a href="https://github.com/BrCasagrande" name="github"></a></li>
+				<li><a href="#" name="facebook"></a></li>
+				<li><a href="#" name="twitter"></a></li>
+				<li><a href="#" name="youtube"></a></li>
+			</ul>
+		</footer>
+
+	</div>
+		
+	<script async src="js/index.min.js"></script>
+
+</body>
+</html>
