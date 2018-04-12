@@ -1,4 +1,6 @@
 CACHE MANIFEST
 #v1 - Cached files are only updated when the manifest-file changes.
-index.html
-index.min.css
+
+<filesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+ Header set Cache-Control "max-age=84600, public"
+ </filesMatch>
